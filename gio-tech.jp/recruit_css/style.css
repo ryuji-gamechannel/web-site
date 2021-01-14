@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 30px;
+  background-color: #000000;
+  color: #333;
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+  
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a:active {
+  color: rgb(248, 248, 245);
+  text-decoration: none;
+}
+
+
+
+
+/* --------------------------------
+ * item
+ * -------------------------------- */
+.item {
+  width: 230px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  background-color: rgb(5, 5, 5);
+  }
+.item .image {
+  display: block;
+  width: 100%;
+  height: 109px;
+}
+.item .category {
+  margin: 15px 9px 10px;
+  color: rgb(252, 249, 249);
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+.item .category::before {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  border: 2px solid;
+  border-radius: 50%;
+  vertical-align: -5px;
+}
+.item .description {
+  margin: 10px;
+  line-height: 1.5;
+}
+.item > a {
+  display: block;
+  margin: -8px -8px -11px;
+  padding: 8px 8px 11px;
+  border-radius: inherit;
+  color: rgb(250, 246, 246);
+  transition: all 0.3s;
+}
+.item > a:hover {
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+}
+.item-maindish,
+.item-maindish .category::before {
+  border-color: rgb(247, 185, 92);
+}
+.item-maindis,
+.item-maindis .category::before {
+  border-color: rgb(2, 2, 2);
+}
+.item-appetizer,
+.item-appetizer .category::before {
+  border-color: rgb(71, 188, 192);
+}
+.item-column,
+.item-column .category::before {
+  border-color: rgb(75, 230, 134);
+}
+.item-breaktime,
+.item-breaktime .category::before {
+  border-color: #C1EFFF;
+}
+.item-m {
+  width: 420px;
+}
+.item-m .image {
+  height: 220px;
+}
+.item-l {
+  width: 400px;
+}
+.item-l .image {
+  height: 130px;
+}
+
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.header {
+  padding: 0px 0;
+  border-bottom: none;
+  text-align: center;
+}
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 0px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 9px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 9px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.drawer-content {
+  width: 35%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgb(5, 5, 5);
+  transition: 0.4s;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0;/* メニューを画面に入れる */
+}
+/* --------------------------------
+ * challenge
+ * -------------------------------- */
+/*
+.item {
+  overflow: hidden;
+}
+.item > a::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: 8px;
+  display: block;
+  height: 109px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.item-m > a::before {
+  height: 146px;
+}
+.item-l > a::before {
+  height: 403px;
+}
+.item > a:hover::before {
+  opacity: 1;
+}
+.item > a::after {
+  content: 'MORE';
+  position: absolute;
+  top: 43.5px;
+  left: 150%;
+  display: block;
+  width: 100px;
+  margin-left: -50px;
+  padding: 8px;
+  border: 3px solid #fff;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.item-m > a::after {
+  top: 62px;
+}
+.item-l > a::after {
+  top: 190.5px;
+}
+.item > a:hover::after {
+  left: 50%;
+  opacity: 1;
+}
+*/

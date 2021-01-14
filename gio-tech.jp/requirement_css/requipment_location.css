@@ -1,0 +1,915 @@
+@charset "utf-8";
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,
+pre,a,del,ins,em,img,hr,q,strong,sub,sup,dl,dt,dd,
+ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td{
+margin:0;
+padding:0;
+}
+
+html {
+	font-size: 62.5%;
+  }
+  body {
+	padding: 30px;
+	background-color: #000000;
+	color: #FFF;
+	font-size: 1.2rem;
+	font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+	
+  }
+  *, *::before, *::after {
+	box-sizing: border-box;
+  }
+  a:link, a:visited, a:hover, a:active {
+	color: rgb(248, 248, 245);
+	text-decoration: none;
+  }
+
+/*--------------------------------------------------
+  tab_content_block
+--------------------------------------------------*/
+
+#content .tab_content_block {/* 既存上書き修正 */
+	position: relative;
+	background-color: #000000;
+	color: #FFF;
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.15);
+	margin-top: 0;
+	overflow: visible;
+	z-index: 0;
+}
+
+/* recruitment_area
+----------------------------------------*/
+.tab_content_block .recruitment_area {
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+}
+.tab_content_block .recruitment_area .recruitment_title {
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 12px;
+	margin-bottom: 35px;
+}
+.tab_content_block .recruitment_area .recruitment_title h2 {
+	float: left;
+	color: #222222;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1em;
+	padding-left: 2px;
+}
+.tab_content_block .recruitment_area .recruitment_title {
+	float: right;
+}
+.tab_content_block .recruitment_area .recruitment_title {
+	position: relative;
+	color: #007fc3;
+	font-size: 12px;
+	line-height: 1.5;
+	padding-left: 18px;
+}
+.tab_content_block .recruitment_area .recruitment_title  {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 12px;
+	height: 13px;
+	background-image: url(/DodaFront/Html/images/icon_kyujin_glossary.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px auto;
+}
+
+.tab_content_block .recruitment_area #job_description_table {
+	height: auto;
+	color: #FFF;
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	table-layout: fixed;
+}
+.tab_content_block .recruitment_area #job_description_table th, .tab_content_block .recruitment_area #job_description_table td {
+	height: auto;
+	color: #FFF;
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .tab_content_block .recruitment_area #job_description_table tr, .tab_content_block .recruitment_area #job_description_table th,
+  .tab_content_block #application_method_table tr, .tab_content_block #application_method_table th{
+    display: block;
+    width: 100%;    
+    /*text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;*/
+    
+  }
+
+  /*.tab_content_block .recruitment_area #job_description_table th,.tab_content_block .recruitment_area #job_description_table td {
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }*/
+
+  /*.tab_content_block .recruitment_area #job_description_table td dl.band_title dt {
+    display: block;
+    width: 50%;
+  }*/
+}
+
+.tab_content_block .recruitment_area #job_description_table th {
+	width: 210px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
+	vertical-align: top;
+	padding: 0 30px 0 0;
+}
+.tab_content_block .recruitment_area #job_description_table td {
+	width: 720px;
+	font-size: 14px;
+	line-height: 1.7;
+}
+.tab_content_block .recruitment_area #job_description_table tr:not(:last-child) td {
+	padding-bottom: 50px;
+}
+.tab_content_block .recruitment_area #job_description_table td .explain {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.tab_content_block .recruitment_area #job_description_table td .text_bold {
+	font-weight: bold;
+}
+.tab_content_block .recruitment_area #job_description_table td .corporate_image {
+	float: left;
+	width: 260px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.tab_content_block .recruitment_area #job_description_table td .corporate_image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.corporate_message {
+	float: left;
+	width: 430px;
+	height: auto;
+	margin-left: 30px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.corporate_message dt {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.corporate_message dd .space, .tab_content_block .recruitment_area #job_description_table td dl.band_title.space {
+	margin-bottom: 15px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.band_title dt {
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1em;
+	background-color:#47bcc0;
+	padding: 7px 11px 6px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.space {
+	margin-bottom: 10px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title dt {
+	display: inline-block;
+	position: relative;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1em;
+	background-color: #f7b95c;
+	padding: 6px 8px 5px 13px;
+	margin-bottom: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title dt::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 5px;
+	height: 20px;
+	background-color: #f7b95c;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title dd {
+	padding: 3px 0 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.float_type dt {
+	float: left;
+	width: 80px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.float_type dd {
+	float: left;
+	min-height: 25px;
+	padding: 1px 0 0 0;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.float_type.w100 dt {
+	width: 100px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.float_type.w100 dd {
+	padding: 1px 0 0 10px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl .detail_area {
+	color: #222222;
+	font-size: 14px;
+	line-height: 1.7;
+}
+.tab_content_block .recruitment_area #job_description_table td p.space, .tab_content_block .recruitment_area #job_description_table td dt.space {
+	margin-bottom: 10px;
+}
+.tab_content_block .recruitment_area #job_description_table td p.space_large, .tab_content_block .recruitment_area #job_description_table td dt.space_large {
+	margin-bottom: 20px;
+}
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.float_type.space_small {
+	margin-bottom: 5px;
+}
+
+/* application_method
+----------------------------------------*/
+.tab_content_block #application_method {
+	margin-bottom: 50px;
+}
+.tab_content_block #application_method .applicant_title {
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 12px;
+	margin-bottom: 35px;
+}
+.tab_content_block #application_method .applicant_title h2 {
+	color: #222222;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5em;
+	padding-left: 2px;
+}
+.tab_content_block #application_method #application_method_table {
+	font-size: 14px;
+	line-height: 1.7;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+	table-layout: fixed;
+}
+.tab_content_block #application_method #application_method_table th, .tab_content_block #application_method #application_method_table td {
+	height: auto;
+	color: #ffffff;
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tab_content_block #application_method #application_method_table th {
+	width: 210px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1em;
+	vertical-align: top;
+	padding: 0 30px 0 0;
+}
+.tab_content_block #application_method #application_method_table th span {
+	font-size: 12px;
+	line-height: 1.5;
+}
+.tab_content_block #application_method #application_method_table td {
+	width: 720px;
+	font-size: 14px;
+	line-height: 1.7;
+}
+.tab_content_block #application_method #application_method_table td .caption {
+	color: #222222;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: left;
+}
+.tab_content_block #application_method #application_method_table td .annotation_text {
+	color: #aaaaaa;
+	font-size: 11px;
+	line-height: 1.4;
+	margin-bottom: 16px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title.space {
+	margin-bottom: 15px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dt {
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1em;
+	background-color: #4be686;
+	padding: 7px 11px 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title:nth-last-child(1) dt {
+	margin-bottom: 10px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title:nth-last-child(2) dt {
+	margin-bottom: 15px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow {
+	margin-bottom: 15px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li {
+	position: relative;
+	min-height: 30px;
+	color: #222222;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1em;
+	padding: 7px 0 0 40px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:not(:last-child) {
+	margin-bottom: 5px;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 30px;
+	color: #007fc3;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1em;
+	text-align: center;
+	background-image: url(/DodaFront/Html/images/icon_kyujin_process_flow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px auto;
+	padding-top: 7px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(1)::before {
+	content: "1";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(2)::before {
+	content: "2";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(3)::before {
+	content: "3";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(4)::before {
+	content: "4";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(5)::before {
+	content: "5";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(6)::before {
+	content: "6";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(7)::before {
+	content: "7";
+}
+.tab_content_block #application_method #application_method_table td dl.band_title dd .selection_flow li:nth-child(8)::before {
+	content: "8";
+}
+.tab_content_block #application_method #application_method_table td p.space_large, .tab_content_block #application_method #application_method_table td dt.space_large, .tab_content_block #application_method #application_method_table td dl.band_title.space_large {
+	margin-bottom: 18px;
+}
+
+
+/*--------------------------------------------------
+  primary_Job_code
+--------------------------------------------------*/
+#primary_Job_code {
+	background-color: #f2fcff;
+	padding-top: 10px;
+	height: 30px;
+}
+#primary_Job_code p {
+	color: #aaaaaa;
+	font-size: 11px;
+	line-height: 1.4;
+	text-align: right;
+	display: inline-block;
+    float: right;
+}
+/*--------------------------------------------------
+  mod_detail_btn
+--------------------------------------------------*/
+.mod_detail_btn {
+	position: relative;
+	background-color: #ffffff;
+	border-top: 1px solid #e6e6e6;
+	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.15);
+	padding: 70px 47px 25px;
+}
+.mod_detail_btn::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background-color: #ffffff;
+	z-index: 1;
+}
+.mod_detail_btn .btn_wrap {
+	width: 750px;
+	margin: 0 auto 50px;
+}
+.mod_detail_btn .btn_wrap li {
+	float: left;
+	width: 360px;
+}
+.mod_detail_btn .btn_wrap li:not(:first-child) {
+	margin-left: 30px;
+}
+.mod_detail_btn .btn_wrap.single li {
+	float: none;
+	margin: 0 auto;
+}
+.mod_detail_btn .btn_wrap li a {
+	margin: 0 auto;
+}
+.mod_detail_btn .btn_wrap li .annotation_text {
+	font-size: 12px;
+	line-height: 1.5;
+	text-align: center;
+	margin: 10px auto 0;
+}
+.mod_detail_btn .btn_wrap li .annotation_text a {
+	color: #007fc3;
+	text-align: left;
+}
+.mod_detail_btn .btn_wrap li .annotation_text span.text_border_box {
+	display: inline-block;
+	width: 58px;
+	color: #222222;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 1em;
+	padding: 4px 0 2px;
+	border: 1px solid #e6e6e6;
+}
+.mod_detail_btn .btn_wrap li .annotation_text span.text_gray {
+	color: #808080;
+	text-align: left;
+}
+.mod_detail_btn .notice_text {
+	color: #808080;
+	font-size: 11px;
+	line-height: 1.4;
+}
+/*--------------------------------------------------
+  related_information
+--------------------------------------------------*/
+.related_information {
+	margin-bottom: 45px;
+}
+.related_information h2 {
+	color: #222222;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.related_information .inner_box {
+	position: relative;
+	color: #222222;
+	font-size: 20px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
+	padding: 30px 47px 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.related_information .inner_box p {
+	color: #222222;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.related_information .inner_box ul.list_information.hide_list {
+	display: none;
+	padding-bottom: 36px;
+}
+.related_information .inner_box ul.list_information li {
+	margin-bottom: 5px;
+}
+.related_information .inner_box ul.list_information li a {
+	color: #007fc3;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.related_information .inner_box ul.list_information li a:hover {
+	text-decoration: underline;
+}
+.related_information .inner_box ul.list_information li span {
+	display: inline-block;
+	height: 18px;
+	font-size: 11px;
+	line-height: 1em;
+	padding: 3px 8px 0;
+	margin-left: 10px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.related_information .inner_box ul.list_information li span.new {
+	color: #ffffff;
+	background-color: #ff0000;
+	border: 1px solid #ff0000;
+}
+.related_information .inner_box ul.list_information li span.near_deadline {
+	color: #ff0000;
+	background-color: #ffffff;
+	border: 1px solid #ff0000;
+}
+.related_information .primary_job_more_btn {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	height: 36px;
+	text-align: left;
+	background-color: #ffffff;
+	box-shadow: 0 0 100px 40px #ffffff;
+	padding-left: 47px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.related_information .primary_job_more_btn a {
+	position: relative;
+	display: inline-block;
+	color: #007fc3;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1em;
+	text-align: center;
+	text-decoration: none;
+	padding: 12px 28px 10px 0;
+	outline: none;
+}
+.related_information .primary_job_more_btn a::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 8px;
+	height: 8px;
+	font-weight: bold;
+	border-style: solid;
+	border-color: rgba(0,127,195,1);
+	border-width: 0 1px 1px 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin-top: -6px;
+}
+.related_information .primary_job_more_btn.open {
+	box-shadow: none;
+}
+.related_information .primary_job_more_btn.open a::before {
+	-webkit-transform: rotate(-136deg);
+	transform: rotate(-136deg);
+	margin-top: 0;
+}
+
+/*--------------------------------------------------
+  clearfix
+--------------------------------------------------*/
+.clrFix:not(.seminarDetail)::after,/* 既存上書き修正 */
+.tab_content_block .recruitment_area #job_description_table td dl.label_title.float_type::after, .scroll_head .scroll_head_inner::after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+/*グラデーション*/
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+
+
+.holder,
+.first,
+.second,
+.third {
+  height: 10vh;
+  width: 100vw;
+}
+.first,
+.second,
+.third {
+  position: absolute;
+}
+.second,
+.third {
+  opacity: 0;
+}
+.holder {
+  height: 10vh;
+  position: relative;
+  z-index: 1;
+}
+.first {
+  animation: first 10s infinite;
+  background: linear-gradient(#210ce2, #db80b5);
+  z-index: 10;
+}
+  @keyframes first {
+    0% {opacity: 2;}
+    10% {opacity: 0.16;}
+    20% {opacity: 0.1;}
+    30% {opacity: 0.09;}
+    40% {opacity: 0.1;}
+    50% {opacity: 0.06;}
+    60% {opacity: 0.12;}
+    70% {opacity: 0.07;}
+    80% {opacity: 0.2;}
+    90% {opacity: 0.04;}
+    100% {opacity: 0.03;}
+  }
+
+.second {
+  animation: second 10s infinite; animation-delay: 2s;
+  background: linear-gradient(#f7f306, #ff75c6);
+  z-index: 20;
+}
+  @keyframes second {
+    0% {opacity: 0;}
+    10% {opacity: 0.01;}
+    20% {opacity: 0.04;}
+    30% {opacity: 0.13;}
+    40% {opacity: 0.01;}
+    50% {opacity: 0.03;}
+    60% {opacity: 0.04;}
+    70% {opacity: 0.04;}
+    80% {opacity: 0.02;}
+    90% {opacity: 0.04;}
+    100% {opacity: 0;}
+  }
+
+.third {
+  animation: third 10s infinite;
+  animation-delay: 8s;
+  background: linear-gradient(#19ec58, #ff75c6);
+  z-index: 30;
+}
+  @keyframes third {
+    0% {opacity: 0;}
+    10% {opacity: 0.1;}
+    20% {opacity: 0.2;}
+    30% {opacity: 0.3;}
+    40% {opacity: 0.4;}
+    50% {opacity: 0.06;}
+    60% {opacity: 0.09;}
+    70% {opacity: 0.03;}
+    80% {opacity: 0.02;}
+    90% {opacity: 0.01;}
+    100% {opacity: 0;}
+  }
+
+.txt {
+  margin-top: calc(50vh - 43px);
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+.p-pageHeader {
+	position: relative;
+  }
+  
+  .p-pageHeader__inner {
+	max-width: 1440px;
+	margin: 0 auto;
+	position: relative;
+  }
+  
+  .p-pageHeader__kv {
+	position: relative;
+	display: block;
+	z-index: 4;
+	width: 100%;
+	max-width: 1440px;
+	margin-right: auto;
+	opacity: 0;
+  }
+  
+  .p-pageHeader__kv > picture {
+	display: block;
+  }
+  
+  .p-pageHeader__img {
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  img {
+	max-width: 100%;
+	vertical-align: middle;
+  }
+  
+  .p-pageHeader__titleContainer {
+	position: absolute;
+	z-index: 12;
+	background-color: rgb(19, 18, 18);
+	width: 420px;
+	height: 210px;
+	top: 60px;
+	left: 850px;
+  }
+  
+  .p-pageHeader__titleWrapper {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+  }
+  
+  .p-pageHeader__titleText {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	padding: 0 60px;
+	width: 420px;
+  }
+  
+  .p-pageHeader__title-sub {
+	display: block;
+	font-size: 1.6rem;
+	color: #feffff;
+	line-height: 1;
+	font-family: "LTC-Caslon-Pro", serif;
+	margin-bottom: 7px;
+  }
+  
+  .p-pageHeader__title {
+	font-size: 3.6rem;
+	color: #feffff;
+	line-height: 1;
+  }
+  
+  @media screen and (max-width: 1024px) {
+
+	.p-pageHeader {
+	  background: initial;
+	  
+	}
+  
+	.p-pageHeader__img > img {
+    max-width:100%;
+    max-height:100%;
+    width: 100%;
+    position: relative;
+	}
+  
+	.p-pageHeader__titleContainer {
+	  left: 0;
+	  top: 87%;
+	  width: 61%;
+	  min-width: 250px;
+	  max-width: 360px;
+	  height: auto;
+    padding: 18px 26px 30px;
+    position: absolute;
+	}
+  
+	.p-pageHeader__titleContainer.-people {
+  top: 60%;
+  position: absolute;
+	width: 40%;
+	min-width: 166px;
+	padding: 26px 26px 33px;
+	}
+  
+	.p-pageHeader__titleText {
+	top: initial;
+	-webkit-transform: initial;
+	transform: initial;
+	padding: 0;
+	}
+  
+	.p-pageHeader__title-sub {
+	font-size: 1rem;
+	margin-bottom: 4px;
+	}
+  
+	.p-pageHeader__title {
+	font-size: 2.6rem;
+	}
+  
+}
+
+@media  screen and(max-width: 320px) {
+	.p-pageHeader {
+	  background: initial;
+	  
+	}
+  
+	.p-pageHeader__img > img {
+    max-width:100%;
+    max-height:100%;
+    width: 100%;
+    position: relative;
+	}
+  
+	.p-pageHeader__titleContainer {
+	  left: 0;
+	  top: 87%;
+	  width: 61%;
+	  min-width: 125px;
+	  max-width: 180px;
+	  height: auto;
+    padding: 18px 26px 30px;
+    position: absolute;
+	}
+  
+	.p-pageHeader__titleContainer.-people {
+  top: 35%;
+  position: absolute;
+	width: 30%;
+	min-width: 166px;
+	padding: 26px 26px 33px;
+	}
+  
+	.p-pageHeader__titleText {
+	top: initial;
+	-webkit-transform: initial;
+	transform: initial;
+	padding: 0;
+	}
+  
+	.p-pageHeader__title-sub {
+	font-size: 1rem;
+	margin-bottom: 4px;
+	}
+  
+	.p-pageHeader__title {
+	font-size: 2.6rem;
+	}
+  
+}
+  
+  .recruitment_area .band_title .dt {
+	color: rgb(71, 188, 192);
+  }
+
